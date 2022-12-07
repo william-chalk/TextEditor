@@ -12,8 +12,6 @@ window.addEventListener("beforeinstallprompt", (event) => {
   });
 });
 
-// TODO: Implement a click event handler on the `butInstall` element
-
 // TODO: Add an handler for the `appinstalled` event
 window.addEventListener("appinstalled", (event) => {
   console.log("appinstalled", event);
