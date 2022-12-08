@@ -27,12 +27,13 @@ if (typeof editor === "undefined") {
 // Check if service workers are supported
 if ("serviceWorker" in navigator) {
   // register workbox service worker
-  const workboxSW = new Workbox("/src-sw.js");
+  const workboxSW = new Workbox("./service-worker.js");
   workboxSW.register();
+  console.log("Service worker loaded");
 } else {
   console.error("Service workers are not supported in this browser.");
 }
 
-window.addEventListener("load",function(){
+window.addEventListener("load", function () {
   this.document.getElementById("logo").src = Logo;
-})
+});
